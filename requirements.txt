@@ -1,0 +1,35 @@
+# Core Deep Learning Frameworks
+tensorflow==2.15.0
+torch==2.1.0
+torchvision==0.16.0
+
+# YOLOv5 and Object Detection
+ultralytics==8.0.20
+opencv-python==4.8.1.78
+Pillow==10.1.0
+
+# Data Processing
+numpy==1.24.3
+pandas==2.1.3
+scipy==1.11.4
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Metrics and Evaluation
+scikit-learn==1.3.2
+pycocotools==2.0.7
+
+# Utilities
+tqdm==4.66.1
+pyyaml==6.0.1
+requests==2.31.0
+
+# Profiling and Benchmarking
+tensorboard==2.15.1
+psutil==5.9.6
+
+# Optional: For better performance
+# onnx==1.15.0
+# onnxruntime==1.16.3
