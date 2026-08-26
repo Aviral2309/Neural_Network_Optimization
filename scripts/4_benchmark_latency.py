@@ -54,6 +54,12 @@ class TFLiteBenchmarker:
             num_threads=num_threads
         )
         self.interpreter.allocate_tensors()
+        '''
+        Yeh C++ level memory allocations invoke karta hai. 
+        Model ke execution graph mein jetni static weights
+        matrices aur dynamic activation tensors hain,
+        unke liye memory memory-map (mmap) kar leta hai.
+        '''
         
         # Get input/output details
         self.input_details = self.interpreter.get_input_details()
@@ -111,7 +117,12 @@ class TFLiteBenchmarker:
         
         # Get output tensor
         output = self.interpreter.get_tensor(self.output_details[0]['index'])
-        
+        """set_tensor(): Raw dynamic numpy memory block ko C++ memory pointer ke input tensor address par push karta hai.
+
+invoke(): Main computation layer! C++ TFLite engine execute hota hai, jisme GEMM (General Matrix Multiply) operations run hoti hain.
+
+get_tensor(): Prediction tensors (bounding boxes, class scores, coordinates) extract karke Python environment ko deliver karta hai.
+        """
         return output
     
     def warm_up(self, num_runs: int = 10) -> None:
@@ -127,6 +138,9 @@ class TFLiteBenchmarker:
         
         Args:
             num_runs: Number of warm-up runs
+            
+        Yeh function 10 dummy random iterations run karta hai taaki 
+        actual benchmarks CPU ke steady peak state par capture ho sakein.
         """
         print(f"\nWarming up ({num_runs} runs)...")
         
