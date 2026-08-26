@@ -1,5 +1,5 @@
 # Core Deep Learning Frameworks
-
+tensorflow
 torch
 torchvision
 
@@ -31,5 +31,5 @@ tensorboard
 psutil
 
 # Optional: For better performance
-# onnx==1.15.0
-# onnxruntime==1.16.3
+onnx
+onnxruntime
