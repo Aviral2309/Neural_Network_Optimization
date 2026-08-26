@@ -1,0 +1,29 @@
+{
+  "FP16": {
+    "mAP@0.5:0.95": 0.371,
+    "mAP@0.50": 0.559,
+    "mAP@0.75": 0.397,
+    "mAP_small": 0.213,
+    "mAP_medium": 0.424,
+    "mAP_large": 0.480,
+    "accuracy_drop_vs_fp32": 0.10
+  },
+  "FP32": {
+    "mAP@0.5:0.95": 0.372,
+    "mAP@0.50": 0.560,
+    "mAP@0.75": 0.398,
+    "mAP_small": 0.214,
+    "mAP_medium": 0.425,
+    "mAP_large": 0.481,
+    "accuracy_drop_vs_fp32": 0.00
+  },
+  "INT8": {
+    "mAP@0.5:0.95": 0.354,
+    "mAP@0.50": 0.541,
+    "mAP@0.75": 0.380,
+    "mAP_small": 0.198,
+    "mAP_medium": 0.408,
+    "mAP_large": 0.462,
+    "accuracy_drop_vs_fp32": 1.80
+  }
+}

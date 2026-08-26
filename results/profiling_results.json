@@ -1,0 +1,436 @@
+{
+  "FP16": {
+    "info": {
+      "model_name": "yolov5s_fp16",
+      "model_size_mb": 13.920974731445312,
+      "total_tensors": 531,
+      "total_parameters": 121934279,
+      "input_shape": [
+        1,
+        640,
+        640,
+        3
+      ],
+      "input_dtype": "<class 'numpy.float32'>",
+      "output_shape": [
+        1,
+        25200,
+        85
+      ],
+      "output_dtype": "<class 'numpy.float32'>",
+      "operation_counts": {
+        "unknown": 18,
+        "functional_15_1": 513
+      }
+    },
+    "profiling": {
+      "mean_latency_ms": 251.17642000041087,
+      "std_latency_ms": 27.019403781633617,
+      "min_latency_ms": 220.88880000228528,
+      "max_latency_ms": 312.34540000150446
+    },
+    "memory": {
+      "total_memory_mb": 451.3279972076416,
+      "largest_tensors": [
+        {
+          "name": "functional_15_1/tf_conv_1_2/sequential_1_1/tf_pad_1_1/Pad",
+          "shape": [
+            1,
+            322,
+            322,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12960.5
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/sequential_1/conv2d_1/BiasAdd;functional_15_1/tf_conv_1/sequential_1/conv2d_1/convolution;functional_15_1/tf_conv_1/sequential_1/conv2d_1/Squeeze;functional_15_1/tf_conv_1/sequential_1/tf_pad_1/Pad/paddings;functional_15_1/tf_conv_1/sequential_1/tf_pad_1/Pad",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12800.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/Sigmoid",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12800.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/mul_1",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12800.0
+        },
+        {
+          "name": "PartitionedCall:0",
+          "shape": [
+            1,
+            25200,
+            85
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 8367.1875
+        },
+        {
+          "name": "functional_15_1/tf_conv_7_1/sequential_3_1/tf_pad_2_1/Pad",
+          "shape": [
+            1,
+            162,
+            162,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6561.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/BiasAdd;functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/convolution;functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/Squeeze2",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/Sigmoid",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/mul_1",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        },
+        {
+          "name": "functional_15_1/tfc3_1/concat",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        }
+      ]
+    }
+  },
+  "FP32": {
+    "info": {
+      "model_name": "yolov5s_fp32",
+      "model_size_mb": 27.706146240234375,
+      "total_tensors": 400,
+      "total_parameters": 114691574,
+      "input_shape": [
+        1,
+        640,
+        640,
+        3
+      ],
+      "input_dtype": "<class 'numpy.float32'>",
+      "output_shape": [
+        1,
+        25200,
+        85
+      ],
+      "output_dtype": "<class 'numpy.float32'>",
+      "operation_counts": {
+        "unknown": 16,
+        "functional_15_1": 384
+      }
+    },
+    "profiling": {
+      "mean_latency_ms": 225.9704550000606,
+      "std_latency_ms": 8.126760994990592,
+      "min_latency_ms": 216.70450000237906,
+      "max_latency_ms": 247.23100000119302
+    },
+    "memory": {
+      "total_memory_mb": 437.51363372802734,
+      "largest_tensors": [
+        {
+          "name": "functional_15_1/tf_conv_1_2/sequential_1_1/tf_pad_1_1/Pad",
+          "shape": [
+            1,
+            322,
+            322,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12960.5
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/sequential_1/conv2d_1/BiasAdd;functional_15_1/tf_conv_1/sequential_1/conv2d_1/convolution;functional_15_1/tf_conv_1/sequential_1/conv2d_1/Squeeze;functional_15_1/tf_conv_1/sequential_1/tf_pad_1/Pad/paddings;functional_15_1/tf_conv_1/sequential_1/tf_pad_1/Pad",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12800.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/Sigmoid",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12800.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/mul_1",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 12800.0
+        },
+        {
+          "name": "PartitionedCall:0",
+          "shape": [
+            1,
+            25200,
+            85
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 8367.1875
+        },
+        {
+          "name": "functional_15_1/tf_conv_7_1/sequential_3_1/tf_pad_2_1/Pad",
+          "shape": [
+            1,
+            162,
+            162,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6561.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/BiasAdd;functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/convolution;functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/Squeeze1",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/Sigmoid",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/mul_1",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        },
+        {
+          "name": "functional_15_1/tfc3_1/concat",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.float32'>",
+          "size_kb": 6400.0
+        }
+      ]
+    }
+  },
+  "INT8": {
+    "info": {
+      "model_name": "yolov5s_int8",
+      "model_size_mb": 7.261466979980469,
+      "total_tensors": 407,
+      "total_parameters": 120410774,
+      "input_shape": [
+        1,
+        640,
+        640,
+        3
+      ],
+      "input_dtype": "<class 'numpy.uint8'>",
+      "output_shape": [
+        1,
+        25200,
+        85
+      ],
+      "output_dtype": "<class 'numpy.uint8'>",
+      "operation_counts": {
+        "unknown": 18,
+        "functional_15_1": 389
+      }
+    },
+    "profiling": {
+      "mean_latency_ms": 110.64623500060407,
+      "std_latency_ms": 8.239050648080404,
+      "min_latency_ms": 99.2231999989599,
+      "max_latency_ms": 130.28920000215294
+    },
+    "memory": {
+      "total_memory_mb": 114.8621940612793,
+      "largest_tensors": [
+        {
+          "name": "functional_15_1/tf_conv_1_2/sequential_1_1/tf_pad_1_1/Pad",
+          "shape": [
+            1,
+            322,
+            322,
+            32
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 3240.125
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/sequential_1/conv2d_1/BiasAdd;functional_15_1/tf_conv_1/sequential_1/conv2d_1/convolution;functional_15_1/tf_conv_1/sequential_1/conv2d_1/Squeeze;functional_15_1/tf_conv_1/sequential_1/tf_pad_1/Pad/paddings;functional_15_1/tf_conv_1/sequential_1/tf_pad_1/Pad",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 3200.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/Sigmoid",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 3200.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1/mul_1",
+          "shape": [
+            1,
+            320,
+            320,
+            32
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 3200.0
+        },
+        {
+          "name": "PartitionedCall:01",
+          "shape": [
+            1,
+            25200,
+            85
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 2091.796875
+        },
+        {
+          "name": "PartitionedCall:0",
+          "shape": [
+            1,
+            25200,
+            85
+          ],
+          "dtype": "<class 'numpy.uint8'>",
+          "size_kb": 2091.796875
+        },
+        {
+          "name": "functional_15_1/tf_conv_7_1/sequential_3_1/tf_pad_2_1/Pad",
+          "shape": [
+            1,
+            162,
+            162,
+            64
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 1640.25
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/BiasAdd;functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/convolution;functional_15_1/tf_conv_1_2/sequential_1_1/conv2d_1_1/Squeeze1",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 1600.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/Sigmoid",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 1600.0
+        },
+        {
+          "name": "functional_15_1/tf_conv_1_2/mul_1",
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "dtype": "<class 'numpy.int8'>",
+          "size_kb": 1600.0
+        }
+      ]
+    }
+  }
+}

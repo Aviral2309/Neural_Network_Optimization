@@ -1,0 +1,4 @@
+Model,Size (MB),Latency Mean (ms),Latency Std (ms),Latency P95 (ms),mAP@0.5 (%),mAP@0.5:0.95 (%),Speedup vs FP32,Size Reduction vs FP32,Accuracy Drop (%)
+FP32,27.71,439.29,45.36,483.66,56.00,37.20,1.00x,1.00x,0.00
+INT8,7.26,249.61,14.30,267.52,54.10,35.40,1.76x,3.82x,1.80
+FP16,13.92,296.62,144.81,464.34,55.90,37.10,1.48x,1.99x,0.10
